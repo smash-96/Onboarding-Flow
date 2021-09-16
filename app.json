@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "authentication-flow",
+    "slug": "authentication-flow",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "authentication-flow"
+}
