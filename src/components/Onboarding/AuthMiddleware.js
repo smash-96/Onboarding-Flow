@@ -1,4 +1,4 @@
-import { authAPI } from "./api";
+import authAPI from "./api/firebase/authApi";
 // import { ErrorCode } from "../../ErrorCode";
 // import Geolocation from "@react-native-community/geolocation";
 import Geolocation from "react-native-geolocation-service";
@@ -142,7 +142,7 @@ const handleSuccessfulLogin = (user, accountCreated) => {
 const fetchAndStoreExtraInfoUponLogin = async (user, accountCreated) => {
   authAPI.fetchAndStorePushTokenIfPossible(user);
 
-  getCurrentLocation().then(async (location) => {
+  getLocation().then(async (location) => {
     const latitude = location.coords.latitude;
     const longitude = location.coords.longitude;
     var locationData = {};
@@ -173,7 +173,7 @@ const fetchAndStoreExtraInfoUponLogin = async (user, accountCreated) => {
   });
 };
 
-const getCurrentLocation = () => {
+const getLocation = () => {
   return new Promise(async (resolve) => {
     let locPermissionDenied = await locationPermission();
     if (locPermissionDenied) {

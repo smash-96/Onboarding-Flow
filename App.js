@@ -1,24 +1,29 @@
 import "react-native-gesture-handler";
 import React, { useEffect } from "react";
+import { View, Text } from "react-native";
 import AuthStack from "./src/navigation/AuthStack";
 import { NavigationContainer } from "@react-navigation/native";
-import { AppWrapper } from "./src/components/Onboarding/AppWrapper";
-import { LogBox } from "react-native";
+import AppWrapper from "./src/components/Onboarding/AppWrapper/AppWrapper";
+// import { LogBox } from "react-native";
 
-LogBox.ignoreAllLogs();
+//LogBox.ignoreAllLogs();
 
-const AppNavigator = () => {
-  return (
-    <NavigationContainer>
-      <AuthStack />
-    </NavigationContainer>
-  );
-};
+// const MyAppNavigator = () => {
+//   return (
+//     <NavigationContainer>
+//       <AuthStack />
+//     </NavigationContainer>
+//   );
+// };
 
-const MainNavigator = IMAVAppCallWrapper(AppNavigator);
+//const MainNavigators = AppWrapper(MyAppNavigator);
 
 const App = () => {
-  return <MainNavigator />;
+  return (
+    <View>
+      <Text>Hello World</Text>
+    </View>
+  );
 };
 
 export default App;
