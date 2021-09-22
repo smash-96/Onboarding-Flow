@@ -31,7 +31,8 @@ const LoadScreen = () => {
       }
       navigation.navigate("LoginScreen");
     } else {
-      navigation.navigate("StartupScreen");
+      //navigation.navigate("StartupScreen");
+      navigation.navigate("SignupScreen");
     }
   };
 

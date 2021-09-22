@@ -6,24 +6,20 @@ import { NavigationContainer } from "@react-navigation/native";
 import AppWrapper from "./src/components/Onboarding/AppWrapper/AppWrapper";
 // import { LogBox } from "react-native";
 
-//LogBox.ignoreAllLogs();
+// LogBox.ignoreAllLogs();
 
-// const MyAppNavigator = () => {
-//   return (
-//     <NavigationContainer>
-//       <AuthStack />
-//     </NavigationContainer>
-//   );
-// };
+const MyAppNavigator = () => {
+  return (
+    <NavigationContainer>
+      <AuthStack />
+    </NavigationContainer>
+  );
+};
 
-//const MainNavigators = AppWrapper(MyAppNavigator);
+const MainNavigator = AppWrapper(MyAppNavigator);
 
 const App = () => {
-  return (
-    <View>
-      <Text>Hello World</Text>
-    </View>
-  );
+  return <MainNavigator />;
 };
 
 export default App;

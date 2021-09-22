@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { UIActivityIndicator } from "react-native-indicators";
 
-const TNActivityIndicator = (props) => {
+const MyActivityIndicator = (props) => {
   return (
     <View style={styles.container}>
       <View style={styles.indicatorContainer}>
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 });
-export default TNActivityIndicator;
+export default MyActivityIndicator;
